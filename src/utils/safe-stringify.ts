@@ -1,4 +1,4 @@
-export function safeStringify(object: string) {
+export function safeStringify(object: any) {
   const safeStringifyReplacer = (seen: WeakSet<any>) => {
     return function (key: string, value: any) {
       if (!(value !== null && typeof value === 'object')) {

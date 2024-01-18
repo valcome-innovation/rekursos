@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "dist/rekursos",
-    "declarationDir": "dist/rekursos/types",
+    "outDir": "dist",
+    "declarationDir": "dist/types",
     "declarationMap": false,
     "target": "esNext",
     "esModuleInterop": true,

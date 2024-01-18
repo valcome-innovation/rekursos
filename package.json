@@ -5,17 +5,16 @@
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
-    "postbuild": "cp ./package.json ./dist/rekursos/",
     "xpreversion": "yarn test",
     "version": "yarn build"
   },
-  "main": "./cjs/index.js",
-  "module": "./esm/index.js",
-  "types": "./types/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
-    "import": "./esm/index.js",
-    "require": "./cjs/index.js",
-    "default": "./esm/index.js"
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js",
+    "default": "./dist/esm/index.js"
   },
   "repository": {
     "type": "git",
