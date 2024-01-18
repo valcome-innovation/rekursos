@@ -13,7 +13,7 @@ export class UrlBuilder {
   }
 
   /**
-   * A relative path is everything after the domain + port part of an url.
+   * A full path is everything after the domain + port part of an url.
    * E.g./path/name/file.jpg?v=1
    */
   public addFullPath(relativePath: string): this {
