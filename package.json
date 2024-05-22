@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
-    "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\""
+    "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\"",
+    "publish": "yarn publish"
   },
   "private": false,
   "main": "./dist/cjs/index.js",
