@@ -1,12 +1,13 @@
 {
   "name": "@valcome/rekursos",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Rekursos: Titan of TypeScript 🔱🏛️ A simple TypeScript library providing essential utility functions, helpers, and operators.",
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
     "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\""
   },
+  "private": false,
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
@@ -15,6 +16,9 @@
     "require": "./dist/cjs/index.js",
     "default": "./dist/esm/index.js"
   },
+  "files": [
+    "./dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/valcome-innovation/rekursos.git"
