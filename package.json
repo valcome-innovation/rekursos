@@ -1,11 +1,11 @@
 {
   "name": "@valcome/rekursos",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "description": "Rekursos: Titan of TypeScript 🔱🏛️ A simple TypeScript library providing essential utility functions, helpers, and operators.",
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
-    "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\" -e \"src/rxjs/.*\" && barrelsby --directory src/rxjs --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\"",
+    "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\"",
     "publish": "yarn publish"
   },
   "private": false,
@@ -17,11 +17,6 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js",
       "default": "./dist/esm/index.js"
-    },
-    "./rxjs": {
-      "import": "./dist/esm/rxjs/index.js",
-      "require": "./dist/cjs/rxjs/index.js",
-      "default": "./dist/esm/rxjs/index.js"
     }
   },
   "files": [
