@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
-    "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\"",
+    "barrels": "barrelsby --directory src --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\" -e \"src/rxjs/.*\" && barrelsby --directory src/rxjs --delete --singleQuotes --noHeader -e \".*\\\\.spec\\\\.ts\"",
     "publish": "yarn publish"
   },
   "private": false,
@@ -13,9 +13,16 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js",
-    "default": "./dist/esm/index.js"
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    },
+    "./rxjs": {
+      "import": "./dist/esm/rxjs/index.js",
+      "require": "./dist/cjs/rxjs/index.js",
+      "default": "./dist/esm/rxjs/index.js"
+    }
   },
   "files": [
     "./dist"
@@ -30,6 +37,9 @@
     "url": "https://github.com/valcome-innovation/rekursos/issues"
   },
   "homepage": "https://github.com/valcome-innovation/rekursos#readme",
+  "optionalDependencies": {
+    "rxjs": "^7.8.1"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
