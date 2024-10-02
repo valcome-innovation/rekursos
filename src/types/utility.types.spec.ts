@@ -1,4 +1,4 @@
-import { Require } from './utility.types';
+import { InstanceTypes, Require } from './utility.types';
 
 describe('UtilityTypes', () => {
 
@@ -19,5 +19,17 @@ describe('UtilityTypes', () => {
     };
 
     expect(summary).toBeTruthy();
+  });
+
+  it('should test InstanceTypes', () => {
+    const types = [String, Number, Boolean] as const;
+
+    const instances: InstanceTypes<typeof types> = [
+      '1',
+      1,
+      false
+    ];
+
+    expect(instances).toBeTruthy();
   });
 });
