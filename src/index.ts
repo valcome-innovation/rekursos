@@ -1,6 +1,7 @@
 export * from './helper/url.builder';
 export * from './rxjs/filter-nullish';
 export * from './types/utility.types';
+export * from './utils/memoize';
 export * from './utils/random-string';
 export * from './utils/regex-escape';
 export * from './utils/safe-stringify';
